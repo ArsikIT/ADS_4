@@ -26,7 +26,7 @@ public class DepthFirstSearch<T> extends Search<T> {
         Vertex<T> current = graph.getVertex(destination);
 
         if (!marked.contains(current)) {
-            return path; // Путь отсутствует
+            return path; // The path is missing
         }
 
         while (current != null) {

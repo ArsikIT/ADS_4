@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class UnweightedGraph<T> implements Graph<T> {
-    private final boolean directed;                  // Указывает, направленный граф или нет
-    private final Map<T, Vertex<T>> vertices;       // Хранит вершины
+    private final boolean directed;                  // Indicates whether the graph is directed or not
+    private final Map<T, Vertex<T>> vertices;       // Stores vertices
 
     public UnweightedGraph(boolean directed) {
         this.directed = directed;
@@ -12,7 +12,7 @@ public class UnweightedGraph<T> implements Graph<T> {
     @Override
     public void addVertex(T data) {
         if (!vertices.containsKey(data)) {
-            vertices.put(data, new Vertex<>(data)); // Создает новую вершину
+            vertices.put(data, new Vertex<>(data)); // Creates a new vertex
         }
     }
 
