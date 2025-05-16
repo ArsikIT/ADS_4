@@ -1,12 +1,12 @@
 import java.util.*;
 
 public class DijkstraSearch<T> extends Search<T> {
-    private Map<Vertex<T>, Double> distances; // Хранит расстояния от начальной вершины
+    private Map<Vertex<T>, Double> distances; // Stores the distances from the starting vertex
 
     public DijkstraSearch(WeightedGraph<T> graph, T startData) {
-        super(graph, startData); // Вызываем конструктор родителя
+        super(graph, startData); // Calling the parent's constructor
         distances = new HashMap<>();
-        distances.put(startVertex, 0.0); // Начальная вершина имеет дистанцию 0
+        distances.put(startVertex, 0.0); // The initial vertex has a distance of 0
     }
 
     @Override

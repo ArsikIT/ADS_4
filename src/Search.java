@@ -1,10 +1,10 @@
 import java.util.*;
 
 public abstract class Search<T> {
-    protected Graph<T> graph;                      // Использует общий интерфейс Graph
-    protected Vertex<T> startVertex;              // Начальная вершина
-    protected Set<Vertex<T>> marked;              // Для отслеживания посещенных вершин
-    protected Map<Vertex<T>, Vertex<T>> edgeTo;   // Для хранения пути
+    protected Graph<T> graph;                      // Uses a common Graph interface
+    protected Vertex<T> startVertex;              // The initial vertex
+    protected Set<Vertex<T>> marked;              // To track visited vertices
+    protected Map<Vertex<T>, Vertex<T>> edgeTo;   // To store the path
 
     public Search(Graph<T> graph, T startData) {
         this.graph = graph;
@@ -16,7 +16,7 @@ public abstract class Search<T> {
         this.edgeTo = new HashMap<>();
     }
 
-    public abstract List<T> pathTo(T destination); // Абстрактный метод для нахождения пути
+    public abstract List<T> pathTo(T destination); // An abstract method for finding a path
 
     public boolean hasPathTo(T destination) {
         Vertex<T> vertex = graph.getVertex(destination);

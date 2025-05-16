@@ -18,12 +18,12 @@ public class UnweightedGraph<T> implements Graph<T> {
 
     @Override
     public Vertex<T> getVertex(T data) {
-        return vertices.get(data); // Возвращает вершину
+        return vertices.get(data); // Returns a vertex
     }
 
     @Override
     public boolean hasVertex(T data) {
-        return vertices.containsKey(data); // Проверяет наличие вершины
+        return vertices.containsKey(data); // Checks for the presence of a vertex
     }
 
     public void addEdge(T source, T destination) {
@@ -34,9 +34,9 @@ public class UnweightedGraph<T> implements Graph<T> {
             throw new IllegalArgumentException("Source or Destination vertex not found in the graph.");
         }
 
-        sourceVertex.addEdge(destinationVertex, 0); // Вес по умолчанию - 0
+        sourceVertex.addEdge(destinationVertex, 0); // The default weight is 0
         if (!directed) {
-            destinationVertex.addEdge(sourceVertex, 0); // Для ненаправленных графов
+            destinationVertex.addEdge(sourceVertex, 0); // For undirected graphs
         }
     }
 
@@ -50,6 +50,6 @@ public class UnweightedGraph<T> implements Graph<T> {
     }
 
     public Collection<Vertex<T>> getVertices() {
-        return vertices.values(); // Возвращает все вершины
+        return vertices.values(); // Returns all vertices
     }
 }
